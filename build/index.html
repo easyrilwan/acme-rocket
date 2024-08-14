@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../src/output.css" />
     <title>Acme Rocket</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <script defer src="js/main.js"></script>
   </head>
 
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
@@ -14,18 +15,27 @@
           <a href="#hero">🚀 Acme Rockets</a>
         </h1>
         <div>
-          <button
-            id="mobile-open-button"
-            class="text-3xl sm:hidden focus:outline-none"
-          >
+          <!-- prettier-ignore -->
+          <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer">
             &#9776;
           </button>
-          <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
+          <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
             <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
             <a href="#testimonials" class="hover:opacity-90">Testimonial</a>
             <a href="#contact" class="hover:opacity-90">Contact Us</a>
           </nav>
         </div>
+      </section>
+      <!-- prettier-ignore -->
+      <section id="mobile-menu" class="absolute top-0 bg-black w-full text-5xl flex-col justify-center origin-top animate-open-menu hidden">
+        <button class="text-8xl self-end px-6">&times;</button>
+        <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+          <a href="#hero" class="w-full text-center py-6 hover:opacity-90">Home</a>
+          <a href="#rockets" class="w-full text-center py-6 hover:opacity-90">Our Rockets</a>
+          <a href="#testimonials" class="w-full text-center py-6 hover:opacity-90">Testimonial</a>
+          <a href="#contact" class="w-full text-center py-6 hover:opacity-90">Contact Us</a>
+          <a href="#footer" class="w-full text-center py-6 hover:opacity-90">Legal</a>
+        </nav>
       </section>
     </header>
 
@@ -35,9 +45,8 @@
         class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
       >
         <article class="sm:w-1/2">
-          <h2
-            class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white"
-          >
+          <!-- prettier-ignore -->
+          <h2 class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white">
             We Boldy Go
             <span class="text-indigo-700 dark:text-indigo-300"
               >Where No Rocket</span
