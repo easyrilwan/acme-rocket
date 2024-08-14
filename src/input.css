@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ::selection {
-  background-color: rgb(15, 118, 110);
-  color: white;
+@layer utilities{
+  .section-min-height{
+    min-height: calc(100vh - 68px)
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-} */
+::selection{
+  background-color: #0f766e;
+  color: white;
+}
